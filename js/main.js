@@ -47,7 +47,7 @@ function mouseOut(selector, activeClass) {
                 if (innerElement.nodeName == '#text') return;
                 if (innerElement.classList.contains('dropdown') == true) {
                     gsap.to(innerElement, {
-                        maxHeight: $('.dropdown-holder').innerHeight(),
+                        maxHeight: innerElement.childNodes[1].offsetHeight,
                         duration: 0.8,
                     });
                     innerElement.addEventListener('mouseleave', () => {
@@ -78,12 +78,8 @@ widthChange('search', 'search-holder');
 widthChange('close-icon', 'search-holder');
 mouseOut('#header .contacts > li, .nav-menu > li');
 
-/* console.log(document.querySelectorAll('#header .dropdown'));
-console.log(document.querySelectorAll('#header .contacts > li, .nav-menu > li'));
- */
-/* $('li').mouseover(function() {
-    gsap.to('#header li', {
-        x: 200,
-        duration: 0.8
-    });
-}); */
+
+function  test(lol) {
+    lol = document.querySelector('#header .contacts .dropdown').childNodes;
+    return lol;
+}

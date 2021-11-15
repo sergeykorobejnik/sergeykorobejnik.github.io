@@ -5,32 +5,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>TITLE</title>
 		<link media="all" rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"></\/script>')</script>
 		<script type="text/javascript" src="js/jquery.main.js"></script>
-		<script async type="text/javascript" src="js/gsap.min.js"></script>
-		<script async type="text/javascript" src="js/main.js"></script>
+		<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+		<script async type="text/javascript" src="js/main-min.js"></script>
 	</head>
-	<body></body>
-</html>
-<header id="header">
-	<div class="body-overlay"></div>
-	<div class="header-row">
-		<!--.burger.inner-burger
-		-->
-		<ul class="contacts">
-			<li><a href="#">Контакты</a></li>
-			<li><a href="tel:+380953315085">+38 (095) 331 50 85</a></li>
-			<li><a href="#">Консультация врача</a>
-				<ul class="dropdown">
-					<div class="dropdown-holder">
-						<li class="dropdown-item"><a href="#">Консультация</a></li>
-						<li class="dropdown-item"><a href="#">Карбокситерапия</a></li>
-						<li class="dropdown-item"><a href="#">Чистка лица</a></li>
-						<li class="dropdown-item more"><a href="#">показать все</a></li>
-					</div>
-				</ul>
-			</li>
-		</ul><a class="logo" href="#">
-			<!-- img(src="images/logo.svg", alt="logo")--><svg width="187" height="29" viewBox="0 0 187 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<body>
+		<div id="wrapper">
+			<header class="header">
+				<div class="body-overlay"></div>
+				<div class="header-row">
+					<div class="burger"><span> </span></div>
+					<ul class="contacts">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="tel:+380953315085">+38 (095) 331 50 85</a></li>
+						<li><a href="#">Консультация врача</a>
+							<div class="dropdown">
+								<ul class="dropdown-holder">
+									<li class="dropdown-item"><a href="#">Консультация</a></li>
+									<li class="dropdown-item"><a href="#">Карбокситерапия</a></li>
+									<li class="dropdown-item"><a href="#">Чистка лица</a></li>
+									<li class="dropdown-item more"><a href="#">показать все</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul><a class="logo" href="#"><svg width="187" height="29" viewBox="0 0 187 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.8888 23.8872C11.8888 22.9055 11.4716 22.0602 10.6373 21.3512C9.80301 20.6422 8.16223 19.906 5.71495 19.1425C1.90498 17.9154 0 15.8702 0 13.0071C0 11.2073 0.653534 9.83028 1.9606 8.87588C3.29548 7.92149 5.13094 7.44429 7.46698 7.44429C8.635 7.44429 10.1924 7.6079 12.1391 7.93512L13.0568 8.05783V14.2341H13.0151C12.3754 10.7438 10.4009 8.99859 7.09154 8.99859C5.84009 8.99859 4.79722 9.28491 3.96292 9.85755C3.12862 10.4029 2.71147 11.0983 2.71147 11.9436C2.71147 12.8162 3.04519 13.5524 3.71263 14.1523C4.38007 14.725 5.64542 15.2976 7.50869 15.8702C10.4287 16.7428 12.4032 17.7245 13.4322 18.8152C14.489 19.906 15.0174 21.2421 15.0174 22.8237C15.0174 24.4598 14.336 25.905 12.9734 27.1594C11.6385 28.3865 9.44148 29 6.38239 29C4.15759 29 2.14137 28.3456 0.333719 27.0367V24.787C2.00232 26.5595 4.11588 27.4457 6.67439 27.4457C8.23175 27.4457 9.4832 27.1321 10.4287 26.5049C11.4021 25.8778 11.8888 25.0052 11.8888 23.8872Z" fill="white"/>
 <path d="M22.0037 28.6319H18.3327V5.52186C18.3327 3.85849 18.1103 2.64504 17.6653 1.88152C17.2482 1.09074 16.5251 0.477198 15.4961 0.0409019V0H22.0037V18.8561L31.2644 7.77151H34.3513L26.6757 16.1975L35.6445 28.6319H31.0975L24.3814 18.6107L22.0037 21.3921V28.6319Z" fill="white"/>
 <path d="M43.4797 28.6319H39.8088V13.2934C39.8088 11.5209 39.5863 10.2802 39.1413 9.57123C38.752 8.86225 38.015 8.27598 36.9304 7.81241V7.77151H43.4797V28.6319ZM38.9328 3.35402C38.9328 2.67231 39.1552 2.11331 39.6002 1.67701C40.073 1.21345 40.6431 0.981663 41.3105 0.981663C41.978 0.981663 42.5481 1.21345 43.0208 1.67701C43.5214 2.14057 43.7717 2.69958 43.7717 3.35402C43.7717 4.00846 43.5214 4.56747 43.0208 5.03103C42.5481 5.46732 41.978 5.68547 41.3105 5.68547C40.6431 5.68547 40.073 5.46732 39.6002 5.03103C39.1552 4.56747 38.9328 4.00846 38.9328 3.35402Z" fill="white"/>
@@ -42,109 +42,131 @@
 <path d="M159.674 1.63611V7.77151H165.389V9.32581H159.674V21.5148C159.674 25.3051 161.12 27.2003 164.012 27.2003H165.472V28.6319H163.47C160.995 28.6319 159.131 27.9502 157.88 26.5867C156.629 25.2233 156.003 23.26 156.003 20.6968V9.32581H152.499V7.77151H156.003V2.82228L159.674 1.63611Z" fill="white"/>
 <path d="M173.276 12.9252V28.6319H169.605V5.52186C169.605 3.85849 169.382 2.64504 168.937 1.88152C168.52 1.09074 167.797 0.477198 166.768 0.0409019V0H173.276V10.103C174.277 9.36671 175.431 8.72591 176.738 8.18054C178.045 7.63517 179.185 7.38975 180.159 7.44429C182.578 7.44429 184.316 8.01693 185.373 9.1622C186.458 10.2802 187 12.2026 187 14.9295V28.6319H183.329V14.8068C183.329 12.6526 183.023 11.1801 182.411 10.3893C181.8 9.5985 180.771 9.2031 179.324 9.2031C176.988 9.2031 174.972 10.4438 173.276 12.9252Z" fill="white"/>
 </svg></a>
-		<div class="header-interactivity">
-			<div class="search-holder">
-				<input class="search-input" type="text" name="search" placeholder="Поиск">
-				<button class="search" type="submit"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<div class="header-interactivity">
+						<div class="search-holder">
+							<input class="search-input" type="text" name="search" placeholder="Поиск">
+							<button class="search" type="submit"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.1669 8.80999C16.1669 13.426 12.6339 17.12 8.33345 17.12C4.03299 17.12 0.5 13.426 0.5 8.80999C0.5 4.19395 4.03299 0.5 8.33345 0.5C12.6339 0.5 16.1669 4.19395 16.1669 8.80999Z" stroke="white"/>
 <path d="M14.6113 14.4453L20.0003 19.3815" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-				</button>
-				<button class="close-icon" type="button"><svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+							</button>
+							<button class="close-icon" type="button"><svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="7.85254" y="8.14844" width="1.09103" height="21.8205" transform="rotate(-45 7.85254 8.14844)" fill="white"/>
 <rect x="8.62402" y="23.5762" width="1.09103" height="21.8205" transform="rotate(-135 8.62402 23.5762)" fill="white"/>
 </svg>
-				</button>
-			</div>
-			<div class="account"><a href="#"> Кабинет</a></div>
-			<div class="liked"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							</button>
+						</div>
+						<div class="account"><a class="inner-text" href="#"> Кабинет</a>
+							<div class="account-icon"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.8972 17.6691C16.6048 13.5283 13.1529 10.2598 8.93761 10.2598C4.72232 10.2598 1.27043 13.5283 0.978027 17.6691H1.98093C2.27107 14.0811 5.27486 11.2598 8.93761 11.2598C12.6004 11.2598 15.6041 14.0811 15.8943 17.6691H16.8972Z" fill="white"/>
+<circle cx="9.22208" cy="4.27481" r="3.77481" stroke="white"/>
+</svg>
+							</div>
+						</div>
+						<div class="liked"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19.4689 6.1351L19.4704 6.15202L19.4731 6.1688C19.4866 6.25326 19.581 6.9339 19.3098 8.08155L19.3098 8.0817C18.9196 9.7354 18.0175 11.2449 16.6931 12.4457C16.6926 12.4462 16.6921 12.4466 16.6916 12.4471L9.94295 18.4676L3.3084 12.4469L3.30811 12.4466C1.98302 11.246 1.08034 9.73566 0.690015 8.08168L0.689994 8.08159C0.418763 6.93321 0.513362 6.25292 0.526891 6.16972L0.529729 6.15226L0.531327 6.13465C0.804337 3.12578 2.90846 1.04492 5.44561 1.04492C7.12289 1.04492 8.62891 1.94064 9.51302 3.45351L9.93999 4.18411L10.374 3.45764C11.2642 1.96732 12.8407 1.04531 14.5542 1.04531C17.0917 1.04531 19.1955 3.12615 19.4689 6.1351Z" stroke="white"/>
 </svg><span class="liked-counter">0</span>
-			</div>
-			<div class="shoping-cart"><span>Корзина:</span><span class="shopping-counter">0</span></div>
+						</div>
+						<div class="shoping-cart">
+							<div class="shoping-cart-icon"><svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.0252 16.9997H2.6701C1.65763 16.9997 0.847656 16.2485 0.847656 15.3095V15.272L1.65763 5.46917C1.69813 5.16869 1.94113 4.94336 2.2651 4.94336H12.4302C12.7542 4.94336 12.9972 5.16872 13.0377 5.46917L13.8477 15.272V15.3096C13.8477 16.2485 13.0377 16.9997 12.0252 16.9997Z" stroke="white"/>
+<path d="M4.12915 4.94368V4.0047C4.12907 2.35211 5.58701 1 7.36896 1C9.1509 1 10.6088 2.35211 10.6088 4.0047V4.94368" stroke="white"/>
+</svg>
+							</div><span class="inner-text">Корзина:</span><span class="shopping-counter">0</span>
+						</div>
+					</div>
+				</div>
+				<div class="header-row">
+					<nav class="nav">
+						<ul class="nav-menu">
+							<li class="nav-item"><a href="#">Макияж</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Бальзам для лица</a></li>
+										<li class="dropdown-item"><a href="#">Маски для лица</a></li>
+										<li class="dropdown-item"><a href="#">Мицеллярная вода</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item"><a href="#">Уход за лицом</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item"><a href="#">Уход за волосами</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item"><a href="#">Уход за телом</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item"><a href="#">Наборы</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item"><a href="#">Мужчинам</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item"><a href="#">Здоровье</a>
+								<div class="dropdown">
+									<ul class="dropdown-holder">
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+										<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item sale"><a href="#">Распродажа</a></li>
+							<li class="nav-item"><a href="#">Бренды</a></li>
+							<li class="nav-item">
+								<ul class="mobile-contacts">
+									<li><a href="#">Консультация врача</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="tel:+380953315085">+38 (095) 331 50 85</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 		</div>
-	</div>
-	<div class="header-row">
-		<nav class="nav">
-			<ul class="nav-menu">
-				<li class="nav-item"><a href="#">Макияж</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Бальзам для лица</a></li>
-							<li class="dropdown-item"><a href="#">Маски для лица</a></li>
-							<li class="dropdown-item"><a href="#">Мицеллярная вода</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item"><a href="#">Уход за лицом</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item"><a href="#">Уход за волосами</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item"><a href="#">Уход за телом</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item"><a href="#">Наборы</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item"><a href="#">Мужчинам</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item"><a href="#">Здоровье</a>
-					<ul class="dropdown">
-						<div class="dropdown-holder">
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-							<li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet.</a></li>
-						</div>
-					</ul>
-				</li>
-				<li class="nav-item sale"><a href="#">Распродажа</a></li>
-				<li class="nav-item"><a href="#">Бренды</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
+	</body>
+</html>

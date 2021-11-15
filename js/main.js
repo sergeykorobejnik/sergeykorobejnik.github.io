@@ -46,7 +46,8 @@ function widthChange(event, targetAction) {
 function mouseOut(selector, activeClass) {
     let temp = document.querySelectorAll(`${selector}`);
     temp.forEach(element => {
-        element.addEventListener('click', function () {            
+        element.addEventListener('click', function (e) { 
+            e.stopPropagation();
             element.childNodes.forEach(innerElement => {
                 if (innerElement.nodeName == '#text') return;
                 if (innerElement.classList.contains('dropdown') == true) {
@@ -54,11 +55,8 @@ function mouseOut(selector, activeClass) {
                         maxHeight: innerElement.childNodes[1].offsetHeight,
                         duration: 0.8,
                     });
-                    gsap.fromTo(innerElement.querySelectorAll('.dropdown-holder a'),{
-                        x: '-100%',
-                    },
-                    {
-                        x: '0%',
+                    gsap.to(innerElement.querySelectorAll('.dropdown-holder a'),{
+                        x: 0,
                         stagger: 0.1,
                         duration: 0.8
                     });                        
@@ -88,11 +86,11 @@ onClickhandler('search', 'active', ['search-input', 'close-icon'], ['search-hold
 onClickhandler('close-icon', 'active', ['search-input', 'close-icon'], ['search-holder', 'body-overlay']);
 widthChange('search', 'search-holder');
 widthChange('close-icon', 'search-holder');
-mouseOut('.header .contacts > li, .nav-menu > li');
+mouseOut('.contacts > li, .nav-menu > li');
 
 
 function  test(lol) {
-    lol = document.querySelectorAll('#header .contacts > li, .nav-menu > li');
+    lol = document.querySelectorAll('.contacts > li, .nav-menu > li');
     return lol;
 }
 
